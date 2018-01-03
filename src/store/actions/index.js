@@ -1,0 +1,1 @@
+export {add_place, delete_place} from './placesActions'
