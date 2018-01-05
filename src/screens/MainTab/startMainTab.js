@@ -12,38 +12,38 @@ const tabScreens = () => {
         Navigation.startTabBasedApp({
             tabs: [
                 {
-                    label: 'Find Place', // tab label as appears under the icon in iOS (optional)
-                    screen: 'places.FindPlace', // unique ID registered with Navigation.registerScreen
-                    title: 'Find Place', // title of the screen as appears in the nav bar (optional),
+                    label: 'Find Place', 
+                    screen: 'places.FindPlace',
+                    title: 'Find Place',
                     icon: source[0],
                     navigatorButtons: {
                         leftButtons: [
                             {
                                 icon : source[2],
                                 title : 'Menu',
-                                id: 'sideDrawer'
+                                id: 'sideDrawerToggle'
                             }
                         ]
                     }
                 },
                 {
-                    label: 'Share Place', // tab label as appears under the icon in iOS (optional)
-                    screen: 'places.SharePlace', // unique ID registered with Navigation.registerScreen
-                    title: 'Share Place', // title of the screen as appears in the nav bar (optional)
+                    label: 'Share Place', 
+                    screen: 'places.SharePlace', 
+                    title: 'Share Place',
                     icon: source[1],
                     navigatorButtons: {
                         leftButtons: [
                             {
                                 icon: source[2],
                                 title: 'Menu',
-                                id: 'sideDrawer'
+                                id: 'sideDrawerToggle'
                             }
                         ]
                     }
                 }
             ],
             drawer: {
-                left: { // optional, define if you want a drawer from the left
+                left: { 
                     screen: 'places.SideDrawer'
                 }
             }

@@ -1,28 +1,25 @@
 import React, {Component} from 'react';
 import { View, Text, StyleSheet, Image} from "react-native";
-import tabScreens from '../MainTab/startMainTab';
 import { CustomButton} from '../../component/common';
 
 
 
 class AuthScreen extends Component {
 
-    loginHandler() {
-        tabScreens();
-    }
+    
 
     loginScreen = () => {
         this.props.navigator.push({
             screen: 'places.LoginScreen',
             title: 'Login',
             animated: true, // does the push have transition animation or does it happen immediately (optional)
-            animationType: 'slide-horizontal',
+            animationType: 'slide-horizontal'
         });
     }
 
     render() {
         return (
-            <View style={{marginTop: 20, flex:1}}>
+            <View style={{marginTop: 20, flex:1, backgroundColor: '#fff'}}>
                 <View style={styles.logoContainer}>
                     <Image
                         style={styles.logoStyle}

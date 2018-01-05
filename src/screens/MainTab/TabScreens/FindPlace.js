@@ -12,13 +12,17 @@ class FindPlace extends Component {
     }
 
     onNavigatorEvent = event => {
+        
         if (event.type === 'NavBarButtonPress') {
-            if (event.id === 'sideDrawer') {
+            if (event.id === 'sideDrawerToggle') {
+                console.log('inside');
                 this.props.navigator.toggleDrawer({
-                    side: 'left'
+                    side: 'left', // the side of the drawer since you can have two, 'left' / 'right'
+                    animated: true,
                 });
             }
         }
+        console.log(this.props.navigator.toggleDrawer);
     }
 
     placeDetailsHandler = key => {
@@ -38,7 +42,7 @@ class FindPlace extends Component {
     }
     render() {
         return (
-            <View>
+            <View style={{flex:1}}>
                 <PlaceList 
                     places={this.props.places} 
                     onItemSelected= {this.placeDetailsHandler}
