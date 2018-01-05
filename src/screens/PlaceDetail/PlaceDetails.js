@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import {delete_place } from '../../store/actions/index'
 
 class PlaceDetail extends Component{
-
+    
     deletePlaceHandler = () => {
         this.props.onDeletePlace(this.props.modalPlace.key);
         this.props.navigator.pop();

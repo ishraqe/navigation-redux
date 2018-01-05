@@ -6,6 +6,23 @@ import PlaceInput from "../../../component/PlaceInput/PlaceInput";
 
 
 class ShareScreen extends Component {
+
+    constructor(props) {
+        super(props);
+        this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
+    }
+
+    onNavigatorEvent = event => {
+        if(event.type === 'NavBarButtonPress') {
+            if (event.id === 'sideDrawer') {
+                this.props.navigator.toggleDrawer({
+                    side: 'left'
+                });
+            }
+        }
+    }
+
+
     onItemAdded = placename => {
         this.props.onAddedPlace(placename);
     }
